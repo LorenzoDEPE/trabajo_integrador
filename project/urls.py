@@ -24,6 +24,6 @@ urlpatterns = [
     path('saludar/', index),
     #path('saludar/<nombre>/<apellido>/', index_dos),
     #path('mostrar-notas/', index_tres),
-    path('mi-familia/', monstrar_familiares), # nueva vista
+    path('familiares/', monstrar_familiares), # nueva vista
 ]
  
