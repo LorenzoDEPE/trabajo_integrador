@@ -16,14 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Primer_MVT.views import index
-from Primer_MVT.views import index, monstrar_familiares #index_dos, index_tres,
+from Primer_MVT.views import index, monstrar_familiares 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('saludar/', index),
-    #path('saludar/<nombre>/<apellido>/', index_dos),
-    #path('mostrar-notas/', index_tres),
     path('familiares/', monstrar_familiares), # nueva vista
 ]
  
