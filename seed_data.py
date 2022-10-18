@@ -1,8 +1,9 @@
 from Primer_MVT.models import Familiar
 
-Familiar(nombre="Rosario", direccion="Rio Parana 745", numero_pasaporte=123123).save()
-Familiar(nombre="Alberto", direccion="Rio Parana 745", numero_pasaporte=890890).save()
-Familiar(nombre="Samuel", direccion="Rio Parana 745", numero_pasaporte=345345).save()
-Familiar(nombre="Florencia", direccion="Rio Parana 745", numero_pasaporte=567567).save()
+Familiar(nombre="Leonardo", direccion="Bv Peron 76", numero_pasaporte=000000).save()
+Familiar(nombre="Lorenzo", direccion="Bv Peron 76", numero_pasaporte=111111).save()
+Familiar(nombre="Juan", direccion="Bv Peron 76", numero_pasaporte=333333).save()
+Familiar(nombre="Jose", direccion="Bv Peron 76", numero_pasaporte=444444).save()
+Familiar(nombre="Jorge", direccion="Urquiza 17", numero_pasaporte=555555).save()
 
 print("Se cargo con éxito los usuarios de pruebas")
