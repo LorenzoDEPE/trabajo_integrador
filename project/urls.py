@@ -16,8 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Primer_MVT.views import index
+from Primer_MVT.views import index, monstrar_familiares #index_dos, index_tres,
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('saludar/', index), # ESTA ES LA NUEVA FUNCTION
+    path('saludar/', index),
+    #path('saludar/<nombre>/<apellido>/', index_dos),
+    #path('mostrar-notas/', index_tres),
+    path('mi-familia/', monstrar_familiares), # nueva vista
 ]
+ 
