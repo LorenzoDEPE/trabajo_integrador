@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <h1>Lista de mis familiares</h1>
 
-    {% for familiar in lista_familiares %}
-        <ul>
-            <li> Nombre: {{familiar.nombre}}, Pasaporte: {{familiar.numero_pasaporte}}, Dirección: {{familiar.direccion}}, Nacimiento: {{familiar.fecha_nacimiento}} </li>
-        </ul>
+    <!-- {% for familiar in lista_familiares %}
+    <ul>
+      <li>
+        Nombre: {{familiar.nombre}}, Pasaporte: {{familiar.numero_pasaporte}},
+        Dirección: {{familiar.direccion}}, Nacimiento:
+        {{familiar.fecha_nacimiento}}
+      </li>
+    </ul>
+    {% endfor %}-->
+
+    <h2>Lista de categorias</h2>
+    {% for categoria in lista_cat %}
+    <ul>
+      <li>Categoria : {{categoria.nombre}}</li>
+      <li>Descripcion : {{categoria.descripcion}}</li>
+    </ul>
     {% endfor %}
-    
-</body>
+  </body>
 </html>
