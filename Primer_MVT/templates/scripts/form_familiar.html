@@ -1,5 +1,4 @@
-{% extends 'scripts/familiares.html' %} {% block titulo%} Alta de nuevo Familiar
-{% endblock %} {% block contenido %}
+{% extends 'scripts/saludar.html' %} {% block contenido %}
 
 <form action="/mi-familia/alta" method="post">
   {% csrf_token %} {{ form }}
