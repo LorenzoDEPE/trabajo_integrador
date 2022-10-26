@@ -1,12 +1,38 @@
 
 from django.shortcuts import render
-from django.shortcuts import render
+from django.views import View
 from Primer_MVT.models import Familiar,Categoria
+from Primer_MVT.forms import  FamiliarForm
 
 def index(request):
     return render(request, "scripts/saludar.html") 
 
 def monstrar_familiares(request):
     lista_familiares = Familiar.objects.all()
+    return render(request, "scripts/familiares.html", {"lista_familiares": lista_familiares})
+
+def mostrar_cat(request):
     lista_cat = Categoria.objects.all()
-    return render(request, "scripts/familiares.html", {"lista_familiares": lista_familiares}, {"lista_cat": lista_cat})
+    return render(request, "scripts/categorias.html", {"lista_cat": lista_cat})
+
+
+class AltaFamiliar(View):
+
+    form_class = FamiliarForm
+    template_name = 'scripts/form_familiar.html'
+    initial = {"nombre":"", "direccion":"", "numero_pasaporte":""}
+
+    def get(self, request):
+        form = self.form_class(initial=self.initial)
+        return render(request, self.template_name, {'form':form})
+
+    def post(self, request):
+        form = self.form_class(request.POST)
+        if form.is_valid():
+            form.save()
+            msg_exito = f"se cargo con éxito el familiar {form.cleaned_data.get('nombre')}"
+            form = self.form_class(initial=self.initial)
+            return render(request, self.template_name, {'form':form, 
+                                                        'msg_exito': msg_exito})
+        
+        return render(request, self.template_name, {"form": form})

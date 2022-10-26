@@ -1,0 +1,8 @@
+{% extends 'scripts/familiares.html' %} {% block contenido %}
+<h2>Categorias</h2>
+{% for categoria in lista_cat %}
+<ul>
+  <li>Categoria : {{categoria.nombre}}</li>
+  <li>Descripcion : {{categoria.descripcion}}</li>
+</ul>
+{% endfor %} {% endblock %}

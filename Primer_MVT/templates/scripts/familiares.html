@@ -9,7 +9,7 @@
   <body>
     <h1>Lista de mis familiares</h1>
 
-    <!-- {% for familiar in lista_familiares %}
+    {% for familiar in lista_familiares %}
     <ul>
       <li>
         Nombre: {{familiar.nombre}}, Pasaporte: {{familiar.numero_pasaporte}},
@@ -17,14 +17,15 @@
         {{familiar.fecha_nacimiento}}
       </li>
     </ul>
-    {% endfor %}-->
+    {% endfor %}
 
-    <h2>Lista de categorias</h2>
+    <!-- <h2>Lista de categorias</h2>
     {% for categoria in lista_cat %}
     <ul>
       <li>Categoria : {{categoria.nombre}}</li>
       <li>Descripcion : {{categoria.descripcion}}</li>
     </ul>
-    {% endfor %}
+    {% endfor %}-->
+    {% block contenido %} {% endblock %}
   </body>
 </html>
