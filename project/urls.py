@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Primer_MVT.views import index, monstrar_familiares, mostrar_cat, AltaFamiliar
+from Primer_MVT.views import index, monstrar_familiares, mostrar_cat, AltaFamiliar, BuscarFamiliar
 
 
 urlpatterns = [
@@ -24,5 +24,6 @@ urlpatterns = [
     path('familiares/', monstrar_familiares), # nueva vista
     path('categorias/', mostrar_cat), # nueva vista
     path('mi-familia/alta', AltaFamiliar.as_view()),
+    path('mi-familia/buscar', BuscarFamiliar.as_view()),
 ]
  
