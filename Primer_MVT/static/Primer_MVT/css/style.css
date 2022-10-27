@@ -17,7 +17,7 @@ h1 {
 .form-container {
   padding-top: 60px;
   margin: 0 auto;
-  max-width: 800px;
+  width: 800px;
 }
 
 input {
