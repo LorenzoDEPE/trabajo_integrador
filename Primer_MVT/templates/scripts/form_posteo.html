@@ -1,0 +1,10 @@
+{% extends 'scripts/saludar.html' %} {% block contenido %}
+
+<form action="/Posteo/alta" method="post">
+  {% csrf_token %} {{ form }}
+  <input type="submit" value="Submit" />
+</form>
+
+<h2 style="color: green">{{msg_exito}}</h2>
+
+{% endblock %}
