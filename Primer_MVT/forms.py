@@ -1,11 +1,11 @@
 from django import forms
-from Primer_MVT.models import Familiar
+from Primer_MVT.models import Usuario
 from Primer_MVT.models import Posteo
 from Primer_MVT.models import Categoria
 
-class FamiliarForm(forms.ModelForm):
+class UsuarioForm(forms.ModelForm):
   class Meta:
-    model = Familiar
+    model = Usuario
     fields = ['nombre', 'direccion', 'numero_pasaporte', 'fecha_nacimiento']
 
 class PosteoForm(forms.ModelForm):

@@ -1,19 +1,17 @@
 {% extends 'scripts/index.html' %} {% block contenido %}
 <div class="form-container">
-    <form action="/mi-familia/buscar" method="post">
+    <form action="/usuario/buscar" method="post">
       {% csrf_token %} {{ form }}
       <input type="submit" value="Submit" />
     </form>
-
-    {% for familiar in lista_familiares %}
+    {% for usuario in lista_usuarios %}
     <ul>
       <li>
-        Nombre: {{familiar.nombre}}, Dirección: {{familiar.direccion}},
-        Pasaporte: {{familiar.numero_pasaporte}}
+        Nombre: {{usuario.nombre}}, Pasaporte: {{usuario.numero_pasaporte}},
+        Dirección: {{usuario.direccion}}, Nacimiento: {{usuario.fecha_nacimiento}}
       </li>
     </ul>
     {% endfor %}
-  
   {% endblock %}
   </div>
   </body>

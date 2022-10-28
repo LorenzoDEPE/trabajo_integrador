@@ -1,0 +1,11 @@
+{% extends 'scripts/index.html' %} {% block contenido %}
+<h2>Lista Usuarios</h2>
+
+{% for usuario in lista_usuarios %}
+<ul>
+  <li>
+    Nombre: {{usuario.nombre}}, Pasaporte: {{usuario.numero_pasaporte}},
+    Dirección: {{usuario.direccion}}, Nacimiento: {{usuario.fecha_nacimiento}}
+  </li>
+</ul>
+{% endfor %} {% endblock %}

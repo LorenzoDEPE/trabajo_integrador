@@ -2,7 +2,7 @@
 from email.policy import default
 from django.db import models
 
-class Familiar(models.Model):
+class Usuario(models.Model):
     nombre = models.CharField(max_length=100,default = "")
     direccion = models.CharField(max_length=200,default = "")
     numero_pasaporte = models.IntegerField()

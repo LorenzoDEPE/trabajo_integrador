@@ -1,15 +1,15 @@
 
 from django.shortcuts import render
 from django.views import View
-from Primer_MVT.models import Familiar,Categoria,Posteo
-from Primer_MVT.forms import  FamiliarForm,Buscar,PosteoForm,CategoriaForm,BuscarTitulo
+from Primer_MVT.models import Usuario,Categoria,Posteo
+from Primer_MVT.forms import  UsuarioForm,Buscar,PosteoForm,CategoriaForm,BuscarTitulo
 
 def index(request):
     return render(request, "scripts/index.html") 
 
-def monstrar_familiares(request):
-    lista_familiares = Familiar.objects.all()
-    return render(request, "scripts/familiares.html", {"lista_familiares": lista_familiares})
+def monstrar_usuarios(request):
+    lista_usuarios = Usuario.objects.all()
+    return render(request, "scripts/usuarios.html", {"lista_usuarios": lista_usuarios})
 
 def mostrar_cat(request):
     lista_cat = Categoria.objects.all()
@@ -20,10 +20,10 @@ def mostrar_post(request):
     return render(request, "scripts/Posteos.html", {"lista_posteos": lista_posteos})
 
 
-class AltaFamiliar(View):
+class AltaUsuario(View):
 
-    form_class = FamiliarForm
-    template_name = 'scripts/form_familiar.html'
+    form_class = UsuarioForm
+    template_name = 'scripts/form_usuario.html'
     initial = {"nombre":"", "direccion":"", "numero_pasaporte":""}
 
     def get(self, request):
@@ -34,7 +34,7 @@ class AltaFamiliar(View):
         form = self.form_class(request.POST)
         if form.is_valid():
             form.save()
-            msg_exito = f"se cargo con éxito el familiar {form.cleaned_data.get('nombre')}"
+            msg_exito = f"se cargo con éxito el usuario {form.cleaned_data.get('nombre')}"
             form = self.form_class(initial=self.initial)
             return render(request, self.template_name, {'form':form, 
                                                         'msg_exito': msg_exito})
@@ -42,10 +42,10 @@ class AltaFamiliar(View):
         return render(request, self.template_name, {"form": form})
     
     
-class BuscarFamiliar(View):
+class BuscarUsuario(View):
 
     form_class = Buscar
-    template_name = 'scripts/buscar_familiar.html'
+    template_name = 'scripts/buscar_usuario.html'
     initial = {"nombre":""}
 
     def get(self, request):
@@ -56,10 +56,10 @@ class BuscarFamiliar(View):
         form = self.form_class(request.POST)
         if form.is_valid():
             nombre = form.cleaned_data.get("nombre")
-            lista_familiares = Familiar.objects.filter(nombre__icontains=nombre).all() 
+            lista_usuarios = Usuario.objects.filter(nombre__icontains=nombre).all() 
             form = self.form_class(initial=self.initial)
             return render(request, self.template_name, {'form':form, 
-                                                        'lista_familiares':lista_familiares})
+                                                        'lista_usuarios':lista_usuarios})
         return render(request, self.template_name, {"form": form})
 
 
