@@ -1,0 +1,11 @@
+{% extends 'scripts/saludar.html' %} {% block contenido %}
+<h2>Posteos</h2>
+
+{% for posteo in lista_posteos %}
+<ul>
+  <li>
+    mensaje: {{posteo.mensaje}}, titulo: {{posteo.titulo}}, autor:
+    {{posteo.autor}}, fecha: {{posteo.fecha}}
+  </li>
+</ul>
+{% endfor %} {% endblock %}
