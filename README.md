@@ -2,25 +2,25 @@
 
 # 1° Entrega Proyecto final Python Coderhouse - Blog
 
-Este proyecto se encarga de la administración de artículos y publicaciones en un blog familiar. Considerando los familiares, posteos y categorías a la que correspondan.
+Este proyecto se encarga de la administración de artículos y publicaciones en un blog. Considerando los usuarios, posteos y categorías a la que correspondan.
 
-### Administración de familiares
+### Administración de usuarios
 
-- `Agregado de familiares`
-Primeramente, se debe crear un familiar y cargar sus datos correspondientemente. Luego presionar submit para que se guarden ue (esto generará un mensaje de salida si los datos se cargaron correctamente). Es necesario completar todos los campos.
-http://127.0.0.1:8000/mi-familia/alta
+- `Agregado de usuarios`
+Primeramente, se debe crear un usuario y cargar sus datos correspondientemente. Luego presionar submit para que se guarden (esto generará un mensaje de salida si los datos se cargaron correctamente). Es necesario completar todos los campos.
+http://127.0.0.1:8000/usuario/alta
 
-- `Visualización de todos los familiares`
-Teniendo familiares cargados, es posible realizar una visualización de todos los familiares. 
-http://127.0.0.1:8000/familiares/
+- `Visualización de todos los usuarios`
+Teniendo usuarios cargados, es posible realizar una visualización de todos los usuarios. 
+http://127.0.0.1:8000/usuarios/
 
-- `Búsqueda de un familiar`
-Es posible realizar búsqueda dentro de los familiares cargados mediante el siguiente link, en este caso, nuevamente se requiere presionar submit al realizar la búsqueda.
-http://127.0.0.1:8000/mi-familia/buscar
+- `Búsqueda de un usuario`
+Es posible realizar búsqueda dentro de los usuarios cargados mediante el siguiente link, en este caso, nuevamente se requiere presionar submit al realizar la búsqueda.
+http://127.0.0.1:8000/usuario/buscar
 
 ### Publicación de mensajes
 - `Creación de un post`
-Siguiendo el link de esta sección, es posible redactar un nuevo posteo y guardarlo. Se aplican las mismas especificaciones que al cargar un nuevo familiar.
+Siguiendo el link de esta sección, es posible redactar un nuevo posteo y guardarlo. Se aplican las mismas especificaciones que al cargar un nuevo usuario.
 http://127.0.0.1:8000/Posteos/alta
 
 - `Búsqueda de un posteo`
@@ -34,7 +34,7 @@ http://127.0.0.1:8000/Posteos/
 
 ### Gestión de categorías
 - `Agregado de categorías`
-Utilizando el  link a continuación, es posible generar una nueva categoría y guardarla. Se aplica el mismo creiterio que al cargar un nuevo familiar.
+Utilizando el  link a continuación, es posible generar una nueva categoría y guardarla. Se aplica el mismo creiterio que al cargar un nuevo usuario.
 http://127.0.0.1:8000/categorias/alta
 
 - `Búsqueda de las categorías`
