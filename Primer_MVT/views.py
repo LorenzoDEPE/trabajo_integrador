@@ -5,7 +5,7 @@ from Primer_MVT.models import Familiar,Categoria,Posteo
 from Primer_MVT.forms import  FamiliarForm,Buscar,PosteoForm,CategoriaForm,BuscarTitulo
 
 def index(request):
-    return render(request, "scripts/saludar.html") 
+    return render(request, "scripts/index.html") 
 
 def monstrar_familiares(request):
     lista_familiares = Familiar.objects.all()
