@@ -37,6 +37,10 @@ http://127.0.0.1:8000/Posteos/
 Utilizando el  link a continuación, es posible generar una nueva categoría y guardarla. Se aplica el mismo creiterio que al cargar un nuevo familiar.
 http://127.0.0.1:8000/categorias/alta
 
+- `Búsqueda de las categorías`
+Es posible realizar búsqueda de las categorias cargadas utilizando el siguiente link, en este caso, nuevamente se requiere presionar submit al realizar la búsqueda.
+http://127.0.0.1:8000/categorias/buscar
+
 - `Visualización de las categorías` 
 Muestra todas las categorías realizadas.
 http://127.0.0.1:8000/categorias/
