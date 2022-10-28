@@ -1,10 +1,11 @@
-{% extends 'scripts/saludar.html' %} {% block contenido %}
+{% extends 'scripts/index.html' %} {% block contenido %}
 <h2>Lista de mis familiares</h2>
 
 {% for familiar in lista_familiares %}
 <ul>
   <li>
-    Nombre: {{familiar.nombre}}, Pasaporte: {{familiar.numero_pasaporte}}, Dirección: {{familiar.direccion}}, Nacimiento: {{familiar.fecha_nacimiento}}
+    Nombre: {{familiar.nombre}}, Pasaporte: {{familiar.numero_pasaporte}},
+    Dirección: {{familiar.direccion}}, Nacimiento: {{familiar.fecha_nacimiento}}
   </li>
 </ul>
 {% endfor %} {% endblock %}

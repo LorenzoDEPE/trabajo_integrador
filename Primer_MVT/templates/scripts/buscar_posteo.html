@@ -1,19 +1,18 @@
 {% extends 'scripts/index.html' %} {% block contenido %}
 <div class="form-container">
-    <form action="/mi-familia/buscar" method="post">
+    <form action="/posteos/buscar" method="post">
       {% csrf_token %} {{ form }}
       <input type="submit" value="Submit" />
     </form>
 
-    {% for familiar in lista_familiares %}
+    {% for posteo in lista_posteos %}
     <ul>
       <li>
-        Nombre: {{familiar.nombre}}, Dirección: {{familiar.direccion}},
-        Pasaporte: {{familiar.numero_pasaporte}}
+        mensaje: {{posteo.mensaje}}, titulo: {{posteo.titulo}}, autor:
+        {{posteo.autor}}, fecha: {{posteo.fecha}}
       </li>
     </ul>
     {% endfor %}
-  
   {% endblock %}
   </div>
   </body>

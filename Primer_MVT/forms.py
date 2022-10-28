@@ -20,3 +20,5 @@ class CategoriaForm(forms.ModelForm):
     
 class Buscar(forms.Form):
       nombre = forms.CharField(max_length=100)
+class BuscarTitulo(forms.Form):
+      titulo = forms.CharField(max_length=100)

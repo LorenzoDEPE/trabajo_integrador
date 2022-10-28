@@ -1,6 +1,6 @@
 {% extends 'scripts/index.html' %} {% block contenido %}
 <div class="form-container">
-  <form action="/mi-familia/alta" method="post">
+  <form action="/categoria/alta" method="post">
     {% csrf_token %} {{ form }}
     <input type="submit" value="Submit" />
   </form>
