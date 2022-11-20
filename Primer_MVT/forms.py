@@ -8,10 +8,11 @@ class UsuarioForm(forms.ModelForm):
     model = Usuario
     fields = ['nombre', 'direccion', 'numero_pasaporte', 'fecha_nacimiento']
 
+
 class PosteoForm(forms.ModelForm):
   class Meta:
     model = Posteo
-    fields = ['mensaje', 'titulo', 'autor', 'fecha']
+    fields = ['mensaje', 'titulo', 'fecha']
 
 class CategoriaForm(forms.ModelForm):
   class Meta:

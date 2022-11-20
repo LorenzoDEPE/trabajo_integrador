@@ -8,10 +8,10 @@ Familiar(nombre="Jorge", direccion="Urquiza 17", numero_pasaporte=555555, fecha_
 
 Categoria(nombre="Noticias",descripcion= "esto es una descripcion").save()
 Categoria(nombre="Noticias",descripcion= "esto es una descripcion").save()
-Categoria(nombre="Noticias",descripcion= "esto es una descripcion").save()"""
+Categoria(nombre="Noticias",descripcion= "esto es una descripcion").save()
 
 Posteo(mensaje="Hola Blog!",titulo= "Primer posteo",autor="Lorenzo",fecha="27/10/2022").save()
 Posteo(mensaje="pregunta",titulo= "Segundo posteo",autor="Leo",fecha="27/10/2022").save()
 Posteo(mensaje="respuesta",titulo= "Tercer posteon",autor="Lucas",fecha="27/10/2022").save()
-
+"""
 print("Se cargo con éxito los usuarios de pruebas")

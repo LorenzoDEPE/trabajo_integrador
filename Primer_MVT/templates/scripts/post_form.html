@@ -1,0 +1,11 @@
+{% extends 'scripts/index.html' %}
+{% block contenido %}
+    
+    <form  enctype='multipart/form-data' method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Publish">
+    </form>
+
+    <a href="{% url 'lista de post' %}">Volver a la lista de post</a>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'scripts/index.html' %}
+{% block contenido %}
+<div class="container">
+    {% if user.is_authenticated %}
+        <a href="{% url 'Logout' %}">Salir</a>
+        <a href="{% url 'Crear post' %}">Crear un nuevo post</a>
+        <a href="{% url 'Modificar usuario' user.id %}">Actualizar Profile</a>
+    {% else %}
+        <a href="{% url 'Login' %}"> Ingresar</a>
+    {% endif %}
+    
+    <table class="table">
+        <tr>
+            <th>titulo</th>
+            <th>fecha</th>
+            <th>Actions</th>
+        </tr>
+        
+        {% for post in object_list %}
+            <tr>
+                <td>{{ post.titulo }}</td>
+                <td>{{ post.fecha }} </td>
+                <td>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'Eliminar post' post.id  %}">Borrar</a>
+                        <a href="{% url 'Modificar post' post.id  %}">Actulizar</a>
+                    {% endif %}
+                    <a href="{% url 'Detalle del post' post.id  %}">Ver</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>    
+  
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">anterior</a>
+            {% endif %}
+
+            <span class="current">
+                Pagina {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+            </span>
+
+            {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">siguiente</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+</div>
+{% endblock %}
