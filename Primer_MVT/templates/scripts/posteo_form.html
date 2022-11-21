@@ -1,4 +1,4 @@
-{% extends 'scripts/index.html' %}
+{% extends 'scripts/base.html' %}
 {% block contenido %}
     
     <form  enctype='multipart/form-data' method="post">
@@ -7,5 +7,5 @@
         <input type="submit" value="Publish">
     </form>
 
-    <a href="{% url 'lista de post' %}">Volver a la lista de post</a>
+    <a href="{% url 'list-post' %}">Volver a la lista de post</a>
 {% endblock %}

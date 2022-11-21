@@ -9,11 +9,11 @@ from django.contrib.auth.admin import User
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, DeleteView, UpdateView, DetailView
 from Primer_MVT.models import Usuario,Posteo
-from Primer_MVT.forms import  UsuarioForm,Buscar,PosteoForm,BuscarTitulo
+from Primer_MVT.forms import  UsuarioForm,Buscar #,BuscarTitulo,PosteoForm
 
-def index(request):
+"""def index(request):
     return render(request, "scripts/index.html") 
-
+"""
 def monstrar_usuarios(request):
     lista_usuarios = Usuario.objects.all()
     return render(request, "scripts/usuarios.html", {"lista_usuarios": lista_usuarios})
@@ -65,49 +65,49 @@ class BuscarUsuario(View):
 
 def index(request):
     posteos = Posteo.objects.order_by('-fecha').all()
-    return render(request, 'blog/index.html', {"Posteos": posteos})
+    return render(request, 'scripts/index.html', {"Posteos": posteos})
 
-class enlistar_Posteo(ListView):
+class ListPost(ListView):
     paginate_by = 2
     model = Posteo
 
-class Crear_Posteo(CreateView):
+class CreatePost(CreateView):
     model=Posteo
     fields = ['titulo', 'fecha', 'mensaje', 'imagen']
     success_url = reverse_lazy("list-Posteo")
     
-class Detalle_Posteo(DetailView):
+class DetailPost(DetailView):
     model=Posteo
 
-class Actualizar_Posteo(UpdateView):
+class UpdatePost(UpdateView):
     model = Posteo
     fields = ['titulo', 'fecha', 'mensaje', 'imagen']
     success_url = reverse_lazy("list-Posteo")
 
-class Borrar_posteo(DeleteView):
+class DeletePost(DeleteView):
     model = Posteo
     success_url = reverse_lazy("list-post")
 
 
-class Buscar_Posteo(ListView):
+class SearchPostByName(ListView):
     def get_queryset(self):
         blog_title = self.request.GET.get('post-title')
         return Posteo.objects.filter(title__icontains=blog_title)
 
 
-class Iniciar_Sesion(LoginView):
-    template_name = 'blog/blog_login.html'
+class BlogLogin(LoginView):
+    template_name = 'scripts/blog_login.html'
     next_page = reverse_lazy("list-post")
 
-class Cerrar_sesion(LogoutView):
-    template_name = 'blog/blog_logout.html'
+class BlogLogout(LogoutView):
+    template_name = 'scripts/blog_logout.html'
     
-class Crear_usuario(CreateView):
+class BlogSignUp(CreateView):
     form_class = UserCreationForm
     success_url = reverse_lazy("blog-login")
-    template_name = "registration/signup.html"
+    template_name = "scripts/signup.html"
 
-class Actualizar_usuario(UpdateView):
+class ProfileUpdate(UpdateView):
     model = User
     fields = ['username', 'first_name', 'last_name', 'email']
     success_url = reverse_lazy("blog-login")

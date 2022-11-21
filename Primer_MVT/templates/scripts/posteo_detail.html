@@ -1,4 +1,4 @@
-{% extends 'scripts/index.html' %}
+{% extends 'scripts/base.html' %}
 {% load static %}
 
 {% block header %}
@@ -14,7 +14,7 @@
     
     <div class="d-flex justify-content-center">
         {% if object.imagen %}
-        <img height="255" src="{{ object.imagen.url }}" />
+        <img height="255" src="{{ object.image.url }}" />
         {% else %}
         <img height="255" src="https://dummyimage.com/255x255/dee2e6/6c757d.jpg" alt="...">
         {% endif %}
