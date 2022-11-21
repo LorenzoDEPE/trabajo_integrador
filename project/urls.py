@@ -26,12 +26,6 @@ urlpatterns = [
     path('usuarios/', monstrar_usuarios), # nueva vista
     path('usuario/alta', AltaUsuario.as_view()),
     path('usuario/buscar', BuscarUsuario.as_view()),
-    #path('Posteos/', mostrar_post),
-    #path('Posteos/alta', AltaPosteo.as_view()),
-    #path('posteos/buscar', BuscarPosteo.as_view()),
-    path('categorias/', mostrar_cat), # nueva vista
-    path('categoria/alta', AltaCategoria.as_view()),
-    path('categoria/buscar', BuscarCategoria.as_view()),
     path('list/', enlistar_Posteo.as_view(), name="lista de post"),
     path('create/', Crear_Posteo.as_view(), name="Crear post"),
     path('detail/<int:pk>/', Detalle_Posteo.as_view(), name="Detalle del post"),
