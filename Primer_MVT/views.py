@@ -70,24 +70,27 @@ def index(request):
 class ListPost(ListView):
     paginate_by = 2
     model = Posteo
+    template_name = 'scripts/posteo_list.html'
 
 class CreatePost(CreateView):
     model=Posteo
     fields = ['titulo', 'fecha', 'mensaje', 'imagen']
-    success_url = reverse_lazy("list-Posteo")
+    success_url = reverse_lazy("list-post")
+    template_name = 'scripts/posteo_form.html'
     
 class DetailPost(DetailView):
     model=Posteo
+    template_name = 'scripts/posteo_detail.html'
 
 class UpdatePost(UpdateView):
     model = Posteo
     fields = ['titulo', 'fecha', 'mensaje', 'imagen']
-    success_url = reverse_lazy("list-Posteo")
+    success_url = reverse_lazy("list-post")
+    template_name = 'scripts/posteo_form.html'
 
 class DeletePost(DeleteView):
     model = Posteo
     success_url = reverse_lazy("list-post")
-
 
 class SearchPostByName(ListView):
     def get_queryset(self):
@@ -111,3 +114,4 @@ class ProfileUpdate(UpdateView):
     model = User
     fields = ['username', 'first_name', 'last_name', 'email']
     success_url = reverse_lazy("blog-login")
+    template_name = "scripts/user_form.html"
