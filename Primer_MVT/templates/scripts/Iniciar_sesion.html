@@ -8,13 +8,14 @@
     <title>Login</title>
 
     <link rel="stylesheet" href="{% static 'Primer_MVT/css/estilos.css' %}" />
+    <link rel="stylesheet" href="{% static 'Primer_MVT/css/style.css' %}" />
   </head>
   <body>
-    <h2>Ingresar</h2>
+    <h2 class="a-center mt-50px">Ingresar</h2>
     <div class="alinear-centro h-100">
       <form method="POST">
         {% csrf_token %} {{form.as_p}}
-        <button type="submit">Login</button>
+        <button class="btn btn-primary" type="submit">Login</button>
       </form>
     </div>
   </body>
