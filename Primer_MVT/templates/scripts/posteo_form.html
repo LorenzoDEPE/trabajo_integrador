@@ -1,11 +1,15 @@
-{% extends 'scripts/base.html' %}
-{% block contenido %}
-    
-    <form  enctype='multipart/form-data' method="post">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="Publish">
+{% extends 'scripts/base.html' %} {% block contenido %}
+<div class="alinear-centro">
+  <div>
+    <form enctype="multipart/form-data" method="post">
+      <div>
+        {% csrf_token %} {{form.as_p}}
+        <input type="submit" value="Publish" />
+      </div>
     </form>
-
-    <a href="{% url 'lista-posteos' %}">Volver a la lista de post</a>
+  </div>
+</div>
+<div class="alinear-centro">
+  <a href="{% url 'lista-posteos' %}">Volver a la lista de post</a>
+</div>
 {% endblock %}

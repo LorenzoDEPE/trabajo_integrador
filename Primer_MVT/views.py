@@ -18,7 +18,8 @@ def monstrar_usuarios(request):
     lista_usuarios = Usuario.objects.all()
     return render(request, "scripts/usuarios.html", {"lista_usuarios": lista_usuarios})
 
-
+def about(request):
+    return render(request, "scripts/about.html")
 
 class AltaUsuario(View):
 

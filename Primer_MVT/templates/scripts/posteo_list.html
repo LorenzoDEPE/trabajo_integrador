@@ -1,55 +1,65 @@
-{% extends 'scripts/base.html' %}
-{% block contenido %}
+{% extends 'scripts/base.html' %} {% block contenido %}
 <div class="container">
-    {% if user.is_authenticated %}
-        <a href="{% url 'logout' %}">Salir</a>
-        <a href="{% url 'create-post' %}">Crear un nuevo post</a>
-        <a href="{% url 'profile-update' user.id %}">Actualizar Profile</a>
-    {% else %}
-        <a href="{% url 'login' %}"> Ingresar</a>
-    {% endif %}
-    
-    <table class="table">
-        <tr>
-            <th>Titulo</th>
-            <th>Mensaje</th>
-            <th>Fecha</th>
-            <th>Actions</th>
-        </tr>
-        
-        {% for post in object_list %}
-            <tr>
-                <td>{{ post.titulo }}</td>
-                <td>{{ post.mensaje }}</td>
-                <td>{{ post.fecha }} </td>
-                <td>
-                    {% if user.is_authenticated %}
-                        <a href="{% url 'borrar-post' post.id  %}">Borrar</a>
-                        <a href="{% url 'update-post' post.id  %}">Actulizar</a>
-                    {% endif %}
-                    <a href="{% url 'detalle-post' post.id  %}">Ver</a>
-                </td>
-            </tr>
-        {% endfor %}
-    </table>    
-  
+  {% if user.is_authenticated %}
+  <h4 class="alinear-der">Bienvenido {{ user }}</h4>
+  <a class="btn btn-outline-danger" href="{% url 'logout' %}">Salir</a>
+  <a class="btn btn-outline-primary" href="{% url 'create-post' %}"
+    >Crear un nuevo post</a
+  >
+  <a class="btn btn-outline-success" href="{% url 'profile-update' user.id %}"
+    >Actualizar Profile</a
+  >
 
-    <div class="pagination">
-        <span class="step-links">
-            {% if page_obj.has_previous %}
-            <a href="?page=1">&laquo; first</a>
-            <a href="?page={{ page_obj.previous_page_number }}">anterior</a>
-            {% endif %}
+  {% else %}
+  <a class="btn btn-outline-primary" href="{% url 'login' %}"> Ingresar</a>
+  {% endif %}
 
-            <span class="current">
-                Pagina {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
-            </span>
+  <table class="table">
+    <tr>
+      <th>Titulo</th>
+      <th>Mensaje</th>
+      <th>Fecha</th>
+      <th>Actions</th>
+    </tr>
 
-            {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}">siguiente</a>
-            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
-            {% endif %}
-        </span>
-    </div>
+    {% for post in object_list %}
+    <tr>
+      <td>{{ post.titulo }}</td>
+      <td>{{ post.mensaje }}</td>
+      <td>{{ post.fecha }}</td>
+      <td>
+        {% if user.is_authenticated %}
+        <a class="btn btn-danger" href="{% url 'borrar-post' post.id  %}"
+          >Borrar</a
+        >
+        <a class="btn btn-success" href="{% url 'update-post' post.id  %}"
+          >Actualizar</a
+        >
+        {% endif %}
+        <a class="btn btn-primary" href="{% url 'detalle-post' post.id  %}"
+          >Ver</a
+        >
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <div class="pagination">
+    <span class="step-links">
+      {% if page_obj.has_previous %}
+      <a href="?page=1">&laquo; first</a>
+      <a href="?page={{ page_obj.previous_page_number }}">anterior</a>
+      {% endif %}
+
+      <span class="current">
+        Pagina {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+      </span>
+
+      {% if page_obj.has_next %}
+      <a href="?page={{ page_obj.next_page_number }}">siguiente</a>
+      <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+      {% endif %}
+    </span>
+  </div>
 </div>
 {% endblock %}

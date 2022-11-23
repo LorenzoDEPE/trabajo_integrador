@@ -37,6 +37,7 @@ urlpatterns = [
     path('salir/', BlogLogout.as_view(), name="logout"),
     path('registrarse/', BlogSignUp.as_view(), name="signup"),
     path('modificar-perfil/<int:pk>', ProfileUpdate.as_view(), name="profile-update"),
+    path('about' , about , name="about"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
