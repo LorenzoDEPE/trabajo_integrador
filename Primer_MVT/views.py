@@ -76,7 +76,7 @@ class ListPost(ListView):
 class CreatePost(CreateView):
     model=Posteo
     fields = ['titulo', 'fecha', 'mensaje', 'imagen']
-    success_url = reverse_lazy("list-post")
+    success_url = reverse_lazy("lista-posteos")
     template_name = 'scripts/posteo_form.html'
     
 class DetailPost(DetailView):
@@ -86,33 +86,35 @@ class DetailPost(DetailView):
 class UpdatePost(UpdateView):
     model = Posteo
     fields = ['titulo', 'fecha', 'mensaje', 'imagen']
-    success_url = reverse_lazy("list-post")
+    success_url = reverse_lazy("lista-posteos")
     template_name = 'scripts/posteo_form.html'
 
 class DeletePost(DeleteView):
+    template_name = 'scripts/posteo_confirm_delete.html'
     model = Posteo
-    success_url = reverse_lazy("list-post")
+    success_url = reverse_lazy("lista-posteos")
 
 class SearchPostByName(ListView):
+    template_name = 'scripts/posteo_list.html'
     def get_queryset(self):
-        blog_title = self.request.GET.get('post-title')
-        return Posteo.objects.filter(title__icontains=blog_title)
+        titulo = self.request.GET.get('post-titulo')
+        return Posteo.objects.filter(titulo__icontains=titulo)
 
 
-class BlogLogin(LoginView):
-    template_name = 'scripts/blog_login.html'
-    next_page = reverse_lazy("list-post")
+class Iniciar_sesion(LoginView):
+    template_name = 'scripts/Iniciar_sesion.html'
+    next_page = reverse_lazy("lista-posteos")
 
 class BlogLogout(LogoutView):
-    template_name = 'scripts/blog_logout.html'
+    template_name = 'scripts/Cerrar_sesion.html'
     
 class BlogSignUp(CreateView):
     form_class = UserCreationForm
-    success_url = reverse_lazy("blog-login")
-    template_name = "scripts/signup.html"
+    success_url = reverse_lazy("login")
+    template_name = "scripts/Crear_usuario.html"
 
 class ProfileUpdate(UpdateView):
     model = User
     fields = ['username', 'first_name', 'last_name', 'email']
-    success_url = reverse_lazy("blog-login")
-    template_name = "scripts/user_form.html"
+    success_url = reverse_lazy("login")
+    template_name = "scripts/Modificar_usuario.html"
