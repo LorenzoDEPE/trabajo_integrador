@@ -68,6 +68,7 @@ def index(request):
     return render(request, 'scripts/index.html', {"Posteos": posteos})
 
 class ListPost(ListView):
+    object_list = Posteo.objects.all()
     paginate_by = 2
     model = Posteo
     template_name = 'scripts/posteo_list.html'

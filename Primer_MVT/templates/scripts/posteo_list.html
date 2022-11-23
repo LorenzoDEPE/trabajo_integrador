@@ -19,9 +19,9 @@
         
         {% for post in object_list %}
             <tr>
-                <td>{{ posteo.titulo }}</td>
-                <td>{{ posteo.mensaje }}</td>
-                <td>{{ posteo.fecha }} </td>
+                <td>{{ post.titulo }}</td>
+                <td>{{ post.mensaje }}</td>
+                <td>{{ post.fecha }} </td>
                 <td>
                     {% if user.is_authenticated %}
                         <a href="{% url 'delete-post' post.id  %}">Borrar</a>
