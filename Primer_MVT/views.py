@@ -66,7 +66,7 @@ class BuscarUsuario(View):
 
 def index(request):
     posteos = Posteo.objects.order_by('-fecha').all()
-    return render(request, 'scripts/index.html', {"Posteos": posteos})
+    return render(request, 'scripts/index.html', {"posteos": posteos})
 
 class ListPost(ListView):
     object_list = Posteo.objects.all()
