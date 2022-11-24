@@ -5,9 +5,9 @@
 Este proyecto se centra en una aplicación que administra artículos y publicaciones en un foro temático de series y películas. La plataforma cuenta con la creación de usuarios y el acceso de los mismos. Los usuarios visitantes pueden ver y crear nuevos posteos, mientras que usuarios registrados pueden además editarlos y eliminarlos. La aplicación tambien permite búsqueda por nombre del posteo.
 
 Para acceder al video de demostración de uso, siga los siguientes links:
-Presentación de la App: https://youtu.be/1eLvUTFOKvQ
-Registro de usuarios:   https://youtu.be/GJf0tiZRRR4
-Creación de un post:    https://youtu.be/lzBNzGV5rDc
+Presentación de la App:https://youtu.be/lzBNzGV5rDc 
+Registro de usuarios: https://youtu.be/GJf0tiZRRR4
+Creación de un post: https://youtu.be/1eLvUTFOKvQ    
 
 
 - `Inicio del sitio`
