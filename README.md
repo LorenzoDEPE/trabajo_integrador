@@ -10,26 +10,6 @@ Registro de usuarios:   https://youtu.be/GJf0tiZRRR4
 Creación de un post:    https://youtu.be/lzBNzGV5rDc
 
 
-
-### Administración de usuarios
-
-- `Agregado de usuarios`
-Primeramente, se debe crear un usuario y cargar sus datos correspondientemente. Luego presionar submit para que se guarden (esto generará un mensaje de salida si los datos se cargaron correctamente). Es necesario completar todos los campos.
-http://127.0.0.1:8000/usuario/alta
-
-- `Visualización de todos los usuarios`
-Teniendo usuarios cargados, es posible realizar una visualización de todos los usuarios. 
-http://127.0.0.1:8000/usuarios/
-
-- `Búsqueda de un usuario`
-Es posible realizar búsqueda dentro de los usuarios cargados mediante el siguiente link, en este caso, nuevamente se requiere presionar submit al realizar la búsqueda.
-http://127.0.0.1:8000/usuario/buscar
-
-### Publicación de mensajes
-- `Creación de un post`
-Siguiendo el link de esta sección, es posible redactar un nuevo posteo y guardarlo. Se aplican las mismas especificaciones que al cargar un nuevo usuario.
-http://127.0.0.1:8000/Posteos/alta
-
 - `Inicio del sitio`
 Vista principal de la app
 http://127.0.0.1:8000/index/
@@ -58,7 +38,6 @@ http://127.0.0.1:8000/modificar-perfil/
 Cerrar sesión: 
 http://127.0.0.1:8000/salir/
 
-### About
 - `Acerca de los desarrolladores - Grupo de trabajo`
 Mediante el próximo link, se visualizan los integrantes del grupo de desarrolladores.
 http://127.0.0.1:8000/about
