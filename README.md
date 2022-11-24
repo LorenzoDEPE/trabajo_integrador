@@ -4,6 +4,13 @@
 
 Este proyecto se centra en una aplicación que administra artículos y publicaciones en un foro temático de series y películas. La plataforma cuenta con la creación de usuarios y el acceso de los mismos. Los usuarios visitantes pueden ver y crear nuevos posteos, mientras que usuarios registrados pueden además editarlos y eliminarlos. La aplicación tambien permite búsqueda por nombre del posteo.
 
+Para acceder al video de demostración de uso, siga los siguientes links:
+Presentación de la App: https://youtu.be/1eLvUTFOKvQ
+Registro de usuarios:   https://youtu.be/GJf0tiZRRR4
+Creación de un post:    https://youtu.be/lzBNzGV5rDc
+
+
+
 ### Administración de usuarios
 
 - `Agregado de usuarios`
@@ -23,19 +30,43 @@ http://127.0.0.1:8000/usuario/buscar
 Siguiendo el link de esta sección, es posible redactar un nuevo posteo y guardarlo. Se aplican las mismas especificaciones que al cargar un nuevo usuario.
 http://127.0.0.1:8000/Posteos/alta
 
-- `Búsqueda de un posteo`
-Es posible realizar búsqueda dentro de los posteos cargados utilizando el siguiente link, en este caso, nuevamente se requiere presionar submit al realizar la búsqueda.
-http://127.0.0.1:8000/Posteos/buscar
+- `Inicio del sitio`
+Vista principal de la app
+http://127.0.0.1:8000/index/
 
-- `Visualización de los posteos`
-Mediante el próximo link, se visualizan todos los posteos realizados.
-http://127.0.0.1:8000/Posteos/
+- `Administración de los posteos`
+Listado de posteos:
+http://127.0.0.1:8000/lista/
+Creación de un nuevo posteo:
+http://127.0.0.1:8000/crear/
+Vista en detalle de un posteo:
+http://127.0.0.1:8000/detalle/
+Modificación de un posteo:
+http://127.0.0.1:8000/modificar-post/
+Borrado de un posteo:
+http://127.0.0.1:8000/borrar/
+Búsqueda de un posteo:
+http://127.0.0.1:8000/buscar-por-nombre/
+
+- `Administración de usuarios`
+Creación de un nuevo usuario: 
+http://127.0.0.1:8000/registrarse/
+Ingreso de usuarios registrados: 
+http://127.0.0.1:8000/ingresar/
+Modificación de datos personales de los usuarios registrados: 
+http://127.0.0.1:8000/modificar-perfil/
+Cerrar sesión: 
+http://127.0.0.1:8000/salir/
+
+### About
+- `Acerca de los desarrolladores - Grupo de trabajo`
+Mediante el próximo link, se visualizan los integrantes del grupo de desarrolladores.
+http://127.0.0.1:8000/about
 
 
 
 
 
-#### About Application
 
 Aplicación educativa curso Python Coderhouse
 
