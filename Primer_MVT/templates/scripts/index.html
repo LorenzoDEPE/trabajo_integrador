@@ -6,13 +6,13 @@
         <div class="col-lg-8">
             <!-- Featured blog post-->
             <div class="card mb-4">
-                {% if  posteos.0 %}
-                <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ posteos.0.imagen.url }}" alt="..." /></a>
+                {% if  Posteos.0 %}
+                <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ Posteos.0.imagen.url }}" alt="..." /></a>
                 <div class="card-body">
-                    <div class="small text-muted">{{posts.0.date_published}}</div>
-                    <h2 class="card-title">{{posteos.0.titulo}}</h2>
-                    <p class="card-text">{{posteos.0.short_content}}</p>
-                    <a class="btn btn-primary" href="{% url 'detail-post' posteos.0.id %}">Read more →</a>
+                    <div class="small text-muted">{{Posteos.0.fecha}}</div>
+                    <h2 class="card-title">{{Posteos.0.titulo}}</h2>
+                    <p class="card-text">{{Posteos.0.mensaje}}</p>
+                    <a class="btn btn-primary" href="{% url 'detalle-post' Posteos.0.id %}">Read more →</a>
                 </div>
                 {% endif %}
             </div>
@@ -20,52 +20,52 @@
             <div class="row">
                 <div class="col-lg-6">
                     <!-- Blog post-->
-                    {% if posteos.1 %}
+                    {% if Posteos.1 %}
                     <div class="card mb-4">
-                        <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ posteos.1.imagen.url }}" alt="..." /></a>
+                        <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ Posteos.1.imagen.url }}" alt="..." /></a>
                         <div class="card-body">
-                            <div class="small text-muted">{{posteos.1.date_published}}</div>
-                            <h2 class="card-title">{{posteos.1.titulo}}</h2>
-                            <p class="card-text">{{posteos.1.short_content}}</p>
-                            <a class="btn btn-primary" href="{% url 'detail-post' posteos.1.id %}">Read more →</a>
+                            <div class="small text-muted">{{Posteos.1.fecha}}</div>
+                            <h2 class="card-title">{{Posteos.1.titulo}}</h2>
+                            <p class="card-text">{{Posteos.1.mensaje}}</p>
+                            <a class="btn btn-primary" href="{% url 'detalle-post' Posteos.1.id %}">Read more →</a>
                         </div>
                     </div>
                     {% endif %}
                     <!-- Blog post-->
                     <div class="card mb-4">
-                    {% if posteos.2 %}
-                        <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ posts.2.imagen.url }}" alt="..." /></a>
+                    {% if Posteos.2 %}
+                        <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ Posteos.2.imagen.url }}" alt="..." /></a>
                         <div class="card-body">
-                            <div class="small text-muted">{{posteos.2.date_published}}</div>
-                            <h2 class="card-title">{{posteos.2.titulo}}</h2>
-                            <p class="card-text">{{posteos.2.short_content}}</p>
-                            <a class="btn btn-primary" href="{% url 'detail-post' posteos.2.id %}">Read more →</a>
+                            <div class="small text-muted">{{Posteos.2.fecha}}</div>
+                            <h2 class="card-title">{{Posteos.2.titulo}}</h2>
+                            <p class="card-text">{{Posteos.2.mensaje}}</p>
+                            <a class="btn btn-primary" href="{% url 'detalle-post' Posteos.2.id %}">Read more →</a>
                         </div>
                     </div>
                     {% endif %}
                 </div>
                 <div class="col-lg-6">
-                    {% if posteos.3 %}
+                    {% if Posteos.3 %}
                     <!-- Blog post-->
                     <div class="card mb-4">
-                        <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ posteos.3.imagen.url }}" alt="..." /></a>
+                        <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ Posteos.3.imagen.url }}" alt="..." /></a>
                         <div class="card-body">
-                            <div class="small text-muted">{{posteos.3.date_published}}</div>
-                            <h2 class="card-title">{{posteos.3.titulo}}</h2>
-                            <p class="card-text">{{posteos.3.short_content}}</p>
-                            <a class="btn btn-primary" href="{% url 'detail-post' posteos.3.id %}">Read more →</a>
+                            <div class="small text-muted">{{Posteos.3.fecha}}</div>
+                            <h2 class="card-title">{{Posteos.3.titulo}}</h2>
+                            <p class="card-text">{{Posteos.3.mensaje}}</p>
+                            <a class="btn btn-primary" href="{% url 'detalle-post' Posteos.3.id %}">Read more →</a>
                         </div>
                     </div>
                     {% endif %}
                     <!-- Blog post-->
                     <div class="card mb-4">
-                        {% if posteos.4 %}
-                                <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ posteos.4.imagen.url }}" alt="..." /></a>
+                        {% if Posteos.4 %}
+                        <a href="#!"><img style="max-width:100%;" class="card-img-top" src="{{ Posteos.4.imagen.url }}" alt="..." /></a>
                         <div class="card-body">
-                            <div class="small text-muted">{{posteos.4.date_published}}</div>
-                            <h2 class="card-title">{{posteos.4.titulo}}</h2>
-                            <p class="card-text">{{posteos.4.short_content}}</p>
-                            <a class="btn btn-primary" href="{% url 'detail-post' posteos.4.id %}">Read more →</a>
+                            <div class="small text-muted">{{Posteos.4.fecha}}</div>
+                            <h2 class="card-title">{{Posteos.4.titulo}}</h2>
+                            <p class="card-text">{{Posteos.4.mensaje}}</p>
+                            <a class="btn btn-primary" href="{% url 'detalle-post' Posteos.4.id %}">Read more →</a>
                         </div>
                         {% endif %}
                     </div>
