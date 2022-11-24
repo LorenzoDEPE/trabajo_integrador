@@ -1,8 +1,8 @@
 
 
-# 1° Entrega Proyecto final Python Coderhouse - Blog
+# Proyecto final Python Coderhouse - Foro de Series y Películas
 
-Este proyecto se encarga de la administración de artículos y publicaciones en un blog. Considerando los usuarios, posteos y categorías a la que correspondan.
+Este proyecto se centra en una aplicación que administra artículos y publicaciones en un foro temático de series y películas. La plataforma cuenta con la creación de usuarios y el acceso de los mismos. Los usuarios visitantes pueden ver y crear nuevos posteos, mientras que usuarios registrados pueden además editarlos y eliminarlos. La aplicación tambien permite búsqueda por nombre del posteo.
 
 ### Administración de usuarios
 
@@ -30,21 +30,6 @@ http://127.0.0.1:8000/Posteos/buscar
 - `Visualización de los posteos`
 Mediante el próximo link, se visualizan todos los posteos realizados.
 http://127.0.0.1:8000/Posteos/
-
-
-### Gestión de categorías
-- `Agregado de categorías`
-Utilizando el  link a continuación, es posible generar una nueva categoría y guardarla. Se aplica el mismo creiterio que al cargar un nuevo usuario.
-http://127.0.0.1:8000/categorias/alta
-
-- `Búsqueda de las categorías`
-Es posible realizar búsqueda de las categorias cargadas utilizando el siguiente link, en este caso, nuevamente se requiere presionar submit al realizar la búsqueda.
-http://127.0.0.1:8000/categorias/buscar
-
-- `Visualización de las categorías` 
-Muestra todas las categorías realizadas.
-http://127.0.0.1:8000/categorias/
-
 
 
 

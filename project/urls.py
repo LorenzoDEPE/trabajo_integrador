@@ -22,10 +22,6 @@ from Primer_MVT.views import * #index, monstrar_usuarios, AltaUsuario, BuscarUsu
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', index, name="inicio"),
-    path('usuarios/', monstrar_usuarios), # nueva vista
-    path('usuario/alta', AltaUsuario.as_view()),
-    path('usuario/buscar', BuscarUsuario.as_view()),
     path('index/', index, name="index-blog"),
     path('lista/', ListPost.as_view(), name="lista-posteos"),
     path('crear/', CreatePost.as_view(), name="create-post"),
